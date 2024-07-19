@@ -25,13 +25,17 @@
 }
 
 .cei02 .container .main .cabecalho {
-    padding: 10px;
+    padding: 1.5rem;
     border-bottom: 2px solid #cdcdcd;
     background-color: #fff;
 }
 
+.cei02 .container .main .cabecalho .info p, h4 {
+    margin: 1rem;
+}
+
 .cei02 .container .main .cabecalho .info .path {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .cei02 .container .main .cabecalho .info .path span {
@@ -43,7 +47,7 @@
     align-items: center;
     font-size: 2rem;
     font-weight: 700;
-    margin-top: 15px;
+    margin: 1rem;
 }
 
 .cei02 .container .main .cabecalho .info .titulo i {
@@ -52,16 +56,8 @@
     font-size: 2rem;
 }
 
-.cei02 .container .main .cabecalho .info h4 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #5f5f5f;
-}
-
 .cei02 .container .main .cabecalho .info .desc {
-    color: #8b8b8b;
-    margin: 0;
-    padding: 0;
+    color: #acaaaa;
 }
 
 .cei02 .container .main .content {
@@ -71,8 +67,16 @@
     background-color: #fbfbfb;
 }
 
+.cei02 .container .main .content .cardsArea {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    padding: 3rem;
+    gap: 15px;
+}
+
 .cei02 .container .main .content .radar {
-    margin: 40px 20%;
+    margin: 2rem 30rem;
     margin-bottom: 0;
     border-radius: 5px;
     background-color: #fff;
@@ -80,15 +84,8 @@
     grid-area: radar;
 }
 
-.cei02 .container .main .content .cardsArea {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    padding: 30px 20px;
-}
-
 .cei02 .container .main .content .graphAreas {
-    margin: 30px 40px;
+    margin: 3rem 5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
@@ -131,6 +128,25 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
+}
+
+.cei02 .container .main .content .graphAreas .form .form-conteudo .circle.item1 {
+    background-color: #8a0707;
+}
+
+.cei02 .container .main .content .graphAreas .form .form-conteudo .circle.item2 {
+    background-color: #8a0707;
+}
+
+.cei02 .container .main .content .graphAreas .form .form-conteudo .circle.item3 {
+    background-color: #b3df3c;
+}
+
+.cei02 .container .main .content .graphAreas .form .form-conteudo .circle.item4 {
+    background-color: #580372;
+}
+
+.cei02 .container .main .content .graphAreas .form .form-conteudo .circle.item5 {
     background-color: #580372;
 }
 
@@ -160,10 +176,9 @@
 }
 
 .cei02 .container .main .content .graphAreas .form .form-conteudo .submenu {
-    margin: 10px 0;
-    padding: 10px;
+    margin: 1rem 0;
+    padding: 1.5rem;
     width: 100%;
-    /* display: block; */
     border-bottom: none;
 }
 
@@ -177,8 +192,8 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     grid-template-areas: "tag tag tag tag tag"
-                         "form form form form form ";
-    gap: 5px;
+                         "form form form form form";
+    gap: 3vw;
 }
 
 .cei02 .container .main .content .graphAreas .form .form-conteudo .submenu .tag-container .tag-submenu {
@@ -187,15 +202,107 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
     gap: 5px;
-    background-color: red;
 }
 
 .cei02 .container .main .content .graphAreas .form .form-conteudo .submenu .tag-container .formulario-submenu {
     grid-area: form;
-    
+}
+
+.cei02 .container .main .content .graphAreas .form .form-conteudo .btn-form p {
+    margin-left: 10px;
 }
 
 .cei02 .container .main .content .graphAreas .form .form-conteudo .submenu .tag-container p {
     font-size: 1.2rem;
     color: #fff;
+}
+
+
+
+@media (max-width: 900px) {
+
+    .cei02 .container .main .cabecalho {
+        padding: 0;
+    }
+
+    .cei02 .container .main .cabecalho .info p {
+        margin: 0.6rem 1rem;
+    }
+
+    .cei02 .container .main .cabecalho .info .path {
+        font-size: 0.6rem;
+    }
+
+    .cei02 .container .main .cabecalho .info .titulo {
+        font-size: 1rem;
+        margin: 0.5rem 1rem;
+    }
+
+    .cei02 .container .main .cabecalho .info .desc {
+        font-size: 0.6rem;
+        text-align: justify;
+        width: 93%;
+        color: #acaaaa;
+    }
+
+    .cei02 .container .main .content .cardsArea {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        padding: 3rem;
+        gap: 15px;
+    }
+
+    .cei02 .container .main .content .radar {
+        margin: 2rem;
+    }
+
+
+    .cei02 .container .main .content .graphAreas {
+        margin: 1rem;
+    }
+
+    .cei02 .container .main .content .graphAreas .form .form-conteudo .tag .info .circle {
+        height: 6px;
+        width: 6px;
+    }
+
+    .cei02 .container .main .content .graphAreas .form .form-conteudo .tag .info p {
+        font-size: 0.567rem;
+    }
+
+    .cei02 .container .main .content .graphAreas .form .form-conteudo .group {
+        margin: 0 1px;
+        font-size: 0.5rem;
+        padding: 2px;
+        border-radius: 3px;
+    }
+
+    .cei02 .container .main .content .graphAreas .form .form-conteudo i {
+        font-size: 0.8rem;
+    }
+
+    .cei02 .container .main .content .graphAreas .form .form-conteudo .btn-form p {
+        font-size: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .cei02 .container .main .content .graphAreas .form .form-conteudo .submenu {
+        padding: 0.5rem;
+        border-bottom: none;
+    }
+
+    .cei02 .container .main .content .graphAreas .form .form-conteudo .submenu p {
+        font-size: 1rem;
+        color: #272727;
+    }
+
+    .cei02 .container .main .content .graphAreas .form .form-conteudo .submenu .tag-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "tag"
+                            "form";
+        gap: 0px;
+    }
 }
