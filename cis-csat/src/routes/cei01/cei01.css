@@ -207,7 +207,7 @@
 .cei01 .container .main .content .graphAreas .form .form-conteudo .submenu .tag-container .formulario-submenu {
     grid-area: form;
 }
-    
+
 .cei01 .container .main .content .graphAreas .form .form-conteudo .btn-form p {
     margin-left: 10px;
 }
@@ -216,6 +216,7 @@
     font-size: 1.2rem;
     color: #fff;
 }
+
 
 
 @media (max-width: 900px) {
@@ -304,9 +305,4 @@
                             "form";
         gap: 0px;
     }
-
-    .cei01 .container .main .content .graphAreas .form .form-conteudo .submenu .tag-container .formulario-submenu {
-        grid-area: form;
-    }
-
 }

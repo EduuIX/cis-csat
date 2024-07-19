@@ -21,11 +21,21 @@
 .btnDevolverValidar .validar {
     background-color: green;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
     margin-right: 20px;
 }
 
 .btnDevolverValidar .validar:hover {
     background-color: rgb(2, 85, 2);
+}
+
+
+@media(max-width: 900px) {
+    
+    .btnDevolverValidar {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    
 }

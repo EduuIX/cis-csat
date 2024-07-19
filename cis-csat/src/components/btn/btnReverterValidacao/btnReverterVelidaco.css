@@ -7,3 +7,11 @@
     color: red;
     cursor: pointer;
 }
+
+@media(max-width: 900px) {
+    
+    .btnReverterValidacao {
+        margin-top: 1rem;
+    }
+    
+}

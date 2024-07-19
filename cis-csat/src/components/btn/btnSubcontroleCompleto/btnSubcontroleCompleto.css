@@ -12,3 +12,11 @@
     background-color: rgb(32, 92, 221);
 }
 
+
+@media(max-width: 900px) {
+    
+    .btnSubcontroleCompleto {
+        margin-top: 1rem;
+    }
+    
+}
