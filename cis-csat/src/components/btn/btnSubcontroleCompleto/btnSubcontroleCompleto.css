@@ -1,0 +1,14 @@
+.btnSubcontroleCompleto {
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: rgb(43, 104, 236);
+    cursor: pointer;
+}
+
+.btnSubcontroleCompleto:hover {
+    background-color: rgb(32, 92, 221);
+}
+

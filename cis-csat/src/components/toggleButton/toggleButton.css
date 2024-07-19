@@ -1,0 +1,50 @@
+.toggle-button {
+  width: 50px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: #ccc;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button.on {
+  background-color: #4caf50;
+}
+
+.toggle-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 1px 1px 2px 2px rgb(125, 125, 125, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: left 0.3s ease;
+}
+
+.toggle-button.on .toggle-thumb {
+  left: 25px;
+}
+
+
+@media (max-width: 900px) {
+    .toggle-button {
+        width: 20px;
+        height: 8px;
+    }
+
+
+    .toggle-thumb {
+        width: 8px;
+        height: 8px;
+        transition: left 0.3s ease;
+        left: 0;
+    }
+
+    .toggle-button.on .toggle-thumb {
+        left: 12px;
+    }
+      
+}

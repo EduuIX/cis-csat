@@ -1,0 +1,31 @@
+.btnDevolverValidar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.btnDevolverValidar .devolver {
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.btnDevolverValidar .devolver:hover {
+    background-color: rgb(151, 4, 4);
+}
+
+.btnDevolverValidar .validar {
+    background-color: green;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.btnDevolverValidar .validar:hover {
+    background-color: rgb(2, 85, 2);
+}

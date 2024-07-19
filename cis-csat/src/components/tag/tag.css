@@ -1,0 +1,28 @@
+.sub-tag {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.sub-tag .cd2 {
+    text-align: end;
+}
+
+.sub-tag.b {
+    background-color: rgb(74, 125, 236);
+}
+
+.sub-tag.y {
+    background-color: rgb(230, 182, 28);
+}
+
+@media(max-width:900px) {
+    
+    .sub-tag p {
+        padding: 0px;
+    }
+}
+

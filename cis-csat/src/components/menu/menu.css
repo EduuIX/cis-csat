@@ -1,0 +1,67 @@
+.menu {
+    width: 100%;
+}
+
+nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+nav a, nav div span {
+    display: flex;
+    justify-content: start;
+    padding: 10px 2vw;
+    align-items: center;
+    border-bottom: 1px solid #cdcdcd;
+    cursor: pointer;
+}
+
+nav a i, nav div span i {
+    margin: 0 5px;
+}
+
+nav a .fa-solid.fa-sort-down, nav div span .fa-solid.fa-sort-down {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2.5rem;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.submenu a {
+    width: fit-content;
+    font-size: 1.35rem;
+    color: #8b8b8b;
+    margin: 1rem 0;
+    padding: 0 3rem;
+    border-bottom: none;
+}
+
+.submenu a:hover {
+    color: #3d3d3d;
+}
+
+@media (max-width:900px) {
+    .menu nav a, nav div span i, nav div span, nav a .fa-solid.fa-sort-down, nav div span .fa-solid.fa-sort-down {
+        font-size: 0.5rem;
+    }
+
+    .submenu {
+        width: 100%;
+        padding: 0.2rem 1.5rem;
+        border-bottom: 1px solid #cdcdcd;
+    }
+
+    .submenu a {
+        font-size: 0.5rem;
+        margin: 0.5rem 0;
+        padding: 0;
+    }
+
+} 

@@ -1,0 +1,91 @@
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+header .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo:hover {
+  cursor: pointer;
+}
+
+header .icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 2vw;
+  background-color: #fcfcfc;
+}
+
+header .icone i {
+  font-size: 1.7rem;
+}
+
+header .logo p {
+  margin: 0 1rem;
+  font-size: 1.7rem;
+}
+
+header .logo h1 {
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+header .user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .user h2 {
+  margin-right: 2vw;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  header .icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-left: 2vw;
+    background-color: #fcfcfc;
+  }
+
+  header .icone i {
+    font-size: 1rem;
+  }
+
+  header .logo p {
+    margin: 0 0.3rem;
+    font-size: 1rem;
+  }
+
+  header .logo h1 {
+    font-size: 1.3rem;
+  }
+
+  header .user h2 {
+    margin-right: 2vw;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+  }
+
+}

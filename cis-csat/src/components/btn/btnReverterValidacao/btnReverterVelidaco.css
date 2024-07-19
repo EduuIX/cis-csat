@@ -1,0 +1,9 @@
+.btnReverterValidacao {
+    margin-top: 50px;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    color: red;
+    cursor: pointer;
+}

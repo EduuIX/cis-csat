@@ -1,0 +1,32 @@
+.cei {
+    width: 100%;
+    background-color: rgb(169, 7, 190);
+    padding: 1rem;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.cei:hover {
+    background-color: rgb(147, 7, 165);
+}
+
+
+@media(max-width: 900px) {
+    .cei {
+        width: 100%;
+        background-color: rgb(169, 7, 190);
+        padding: 0.5rem;
+        color: #fff;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 0.5rem;
+    }
+    
+    .cei:hover {
+        background-color: rgb(147, 7, 165);
+    }
+}

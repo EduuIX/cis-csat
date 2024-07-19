@@ -1,0 +1,118 @@
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #cdcdcd;
+}
+
+footer .container-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    background-color: #eee;
+    grid-template-areas: "dev link logo";
+}
+
+footer .container-footer .conteudo {
+    padding: 5rem 0;
+    height: 100%;
+}
+
+footer .container-footer .dev {
+    grid-area: dev;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container-footer .dev .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+footer .container-footer .dev h3{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+footer .container-footer .dev p a {
+    color: rgb(47, 102, 255);
+}
+
+footer a:hover {
+    color: rgb(47, 102, 255);
+    text-decoration: underline;
+}
+
+footer .container-footer .link {
+    grid-area: link;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container-footer .link .conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container-footer .link p {
+    font-size: 2.5rem ;
+    margin: 0 0.5rem;
+    color: #9a9a9a;
+}
+
+footer .container-footer .link a {
+    color: #9a9a9a;
+}
+
+footer .container-footer .logo {
+    grid-area: logo;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .container-footer .logo .conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 900px) {
+
+    footer .container-footer .conteudo {
+        padding: 2rem 0;
+    }
+
+    footer .container-footer .dev h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    footer .container-footer .dev p {
+        font-size: 0.5rem;
+    }
+
+    footer .container-footer .link p {
+        font-size: 1rem ;
+        margin: 0 0.5rem;
+        color: #9a9a9a;
+    }
+    
+    footer .container-footer .link a {
+        font-size: 0.5rem;
+        color: #9a9a9a;
+    }
+
+    footer .container-footer .logo .conteudo p {
+        font-size: 0.7rem;
+    }
+
+}

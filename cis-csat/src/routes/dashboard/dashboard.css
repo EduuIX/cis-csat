@@ -1,0 +1,186 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard .container {
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "menu main"
+        "footer footer";
+}
+
+.dashboard .container .menu {
+    grid-area: menu;
+}
+
+.dashboard .container .footer {
+     grid-area: footer;
+}
+
+.dashboard .container .main {
+    border-left: 1px solid #cdcdcd;
+    grid-area: main;
+}
+
+.dashboard .container .main .cabecalho {
+    padding: 1.5rem;
+    border-bottom: 2px solid #cdcdcd;
+    background-color: #fff;
+}
+
+.dashboard .container .main .cabecalho .info p {
+    margin: 1rem;
+}
+
+.dashboard .container .main .cabecalho .info .path {
+    font-size: 1rem;
+}
+
+.dashboard .container .main .cabecalho .info .path span {
+    color: blue;
+}
+
+.dashboard .container .main .cabecalho .info .titulo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+.dashboard .container .main .cabecalho .info .titulo i {
+    margin-left: 10px;
+    color: #8b8b8b;
+    font-size: 2rem;
+}
+
+.dashboard .container .main .cabecalho .info .desc {
+    color: #acaaaa;
+}
+
+.dashboard .container .main .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dashboard .container .main .content .cardsArea {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    padding: 3rem;
+    gap: 15px;
+}
+
+.dashboard .container .main .content .ceiAreas {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto;
+    margin: 0 3rem;
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.dashboard .container .main .content .graphAreas {
+    margin: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "bar bar  radar"
+        "single single single"
+        "gb po po";
+    grid-template-rows: 35vw;
+    gap: 20px;
+}
+
+.dashboard .container .main .content .graphAreas .bar {
+    border-radius: 5px;
+    background-color: #fff;
+    grid-area: bar;
+    box-shadow: 1px 1px 10px 1px rgb(125, 125, 125, 0.4);
+}
+
+.dashboard .container .main .content .graphAreas .radar {
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 1px rgb(125, 125, 125, 0.4);
+    grid-area: radar;
+}
+
+    .dashboard .container .main .content .graphAreas .singleBar {
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 1px rgb(125, 125, 125, 0.4);
+    grid-area: single;
+    }
+
+    .dashboard .container .main .content .graphAreas .groupBar {
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 1px rgb(125, 125, 125, 0.4);
+    grid-area: gb;
+    }
+
+    .dashboard .container .main .content .graphAreas .policyBar {
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 1px rgb(125, 125, 125, 0.4);
+    grid-area: po;
+    }
+
+
+@media (max-width: 900px) {
+
+    .dashboard .container .main .cabecalho {
+        padding: 0;
+    }
+
+    .dashboard .container .main .cabecalho .info p {
+        margin: 0.6rem 1rem;
+    }
+
+    .dashboard .container .main .cabecalho .info .path {
+        font-size: 0.6rem;
+    }
+
+    .dashboard .container .main .cabecalho .info .titulo {
+        font-size: 1rem;
+        margin: 0.5rem 1rem;
+    }
+
+    .dashboard .container .main .cabecalho .info .desc {
+        font-size: 0.6rem;
+        width: 50%;
+        color: #acaaaa;
+    }
+
+    .dashboard .container .main .content .cardsArea {
+        padding: 0.5rem;
+        gap: 5px;
+    }
+
+    .dashboard .container .main .content .ceiAreas {
+        margin: 0 1rem;
+        gap: 5px;
+        margin-top: 1rem;
+    }
+
+    .dashboard .container .main .content .graphAreas {
+        margin: 3rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "bar"
+            "radar"
+            "single"
+            "gb"
+            "po";
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+}
