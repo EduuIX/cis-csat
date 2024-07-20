@@ -51,35 +51,38 @@
 }
 
 .sub-form form .descricoes .desc-cont{
-    width: 100%;
     display: flex;
-    justify-content: space-around;
-    padding: 10px 0px;
+    width: 120%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.sub-form form .descricoes .desc-cont h3{
+.sub-form form .descricoes .desc-cont h3 {
     font-size: 1.4rem;
     font-weight: 600;
     margin-left: 30px;
-    width: 100px;
     text-align: start;
+    width: 50%;
 }
 
 .sub-form form .descricoes .desc-cont h4 {
+    text-align: center;
     font-size: 1.4rem;
     margin-left: 4vw;
+    width: 30%;
 }
 
 .sub-form form .descricoes .desc-cont .name {
     color: #3a63eb;
 }
-
+ 
 .formulario .atribuicao {
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+    margin: 6rem 2rem;
 }
 
 .formulario .atribuicao h3 {
@@ -92,6 +95,7 @@
 }
 
 .formulario .atribuicao .resp h4{
+    margin: 0;
     color: #3a63eb;
 }
 
@@ -105,6 +109,7 @@
 }
 
 .formulario .atribuicao .evidencia h4 {
+    margin: 0;
     font-weight: 700;
 }
 
@@ -180,7 +185,7 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         gap: 5px;
-        margin: 2rem;
+        margin: 2rem 0rem;
     }
     
     .formulario .atribuicao h3 {
@@ -200,9 +205,10 @@
         color: #3a63eb;
     }
     
-    .formulario .atribuicao .resp h5{
+    .formulario .atribuicao .resp h5 {
         text-align: center;
         color: #333435;
+        font-size: 0.8rem;
     }
     
     .formulario .atribuicao .evidencia {
@@ -212,11 +218,13 @@
     
     .formulario .atribuicao .evidencia h4 {
         text-align: center;
+        font-size: 1rem;
         margin: 0;
         font-weight: 700;
     }
-    
+   
     .formulario .atribuicao .evidencia h5 {
-        text-align: center;
+        font-size: 0.8rem;
+        text-align: start;
     }
 }
