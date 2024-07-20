@@ -130,7 +130,7 @@ const CEI02 = () => {
                                             {submenu[item.key] && (
                                                 <div className="submenu">
                                                     <p>{item.submenuContent}</p>
-                                                    <div className="tag-container">
+                                                    <div className="tag-container" >
                                                         {item.key === 'item1' && (
                                                             <>
                                                                 <Tag cod1='NIST 800-53 Rev 5' cod2='CM-8' cls='b'/>

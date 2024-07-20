@@ -7,6 +7,12 @@
     margin-top: 10px;
 }
 
+.sub-tag h5 {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 800;
+}
+
 .sub-tag .cd2 {
     text-align: end;
 }

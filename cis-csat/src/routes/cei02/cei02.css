@@ -194,6 +194,7 @@
     grid-template-areas: "tag tag tag tag tag"
                          "form form form form form";
     gap: 3vw;
+    font-size: 3rem;
 }
 
 .cei02 .container .main .content .graphAreas .form .form-conteudo .submenu .tag-container .tag-submenu {
