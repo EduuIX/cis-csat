@@ -11,24 +11,55 @@ type formularioProps = {
 
 const Formulario:React.FC<formularioProps> = ({ ativo, funcao, assinado, completado, validado }) => {
     return (
-        <main className="formulario">           <section className="sub-form">
+        <main className="formulario">
+            <section className="sub-form">
                 <form action="">
                     <div className="inputs">
                         <div className="input">
                             <label htmlFor="politica-definida">Politica definida</label>
-                            <input type="text" id='politica-definida' placeholder='Nenhuma política'/>
+                            <select id="politica-definida">
+                                <option value="nenhuma-politica">Nenhuma política</option>
+                                <option value="politica-informal">Política Informal</option>
+                                <option value="politica-parcialmente-escrita">Política parcialmente escrita</option>
+                                <option value="politica-escrita">Política escrita</option>
+                                <option value="politica-escrita-aprovada">Política escrita aprovada</option>
+                                <option value="nao-aplicavel">Não aplicável</option>
+                            </select>
+
                         </div>
                         <div className="input">
                             <label htmlFor="politica-definida">Controle Implementado</label>
-                            <input type="text" id='politica-definida' placeholder='Não implementado'/>
+                            <select id="politica-definida">
+                                <option value="nao-implementado">Não Implementado</option>
+                                <option value="partes-implementado">Partes da política implementada</option>
+                                <option value="implementado-alguns">Implementado em alguns sistemas</option>
+                                <option value="implementado-maioria">Implementado na maioria dos sistemas</option>
+                                <option value="implementado-todos">Implementado em todos os sistemas</option>
+                                <option value="nao-aplicavel">Não aplicável</option>
+                            </select>
                         </div>
                         <div className="input">
                             <label htmlFor="politica-definida">Controle Automatizado</label>
-                            <input type="text" id='politica-definida' placeholder='Não automatizado'/>
+                            <select id="politica-definida">
+                                <option value="nao-automatizado">Não automatizado</option>
+                                <option value="partes-automatizadas">Partes da política automatizadas</option>
+                                <option value="automatizado-alguns">Automatizado em alguns sistemas</option>
+                                <option value="automatizado-maioria">Automatizado na maioria dos sistemas</option>
+                                <option value="automatizado-todos">Automatizado em todos os sistemas</option>
+                                <option value="nao-aplicavel">Não aplicável</option>
+                            </select>
                         </div>
                         <div className="input">
                             <label htmlFor="politica-definida">Controle Relatado</label>
-                            <input type="text" id='politica-definida' placeholder='Não reportado'/>
+                            <select id="politica-definida">
+                                <option value="nao-reportado">Não reportado</option>
+                                <option value="partes-relatadas">Partes da política relatadas</option>
+                                <option value="relatado-alguns">Relatado em alguns sistemas</option>
+                                <option value="relatado-maioria">Relatado na maioria dos sistemas</option>
+                                <option value="relatado-todos">Relatado em todos os sistemas</option>
+                                <option value="nao-aplicavel">Não aplicável</option>
+                            </select>
+
                         </div>
                     </div>
                     <div className="descricoes">

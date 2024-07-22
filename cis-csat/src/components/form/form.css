@@ -12,7 +12,7 @@
 }
 
 .sub-form form {
-    margin: 0 5vw;
+    margin: 0 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,9 +36,10 @@
     font-weight: 600;
 }
 
-.sub-form form .inputs .input input {
-    margin-left: 40px;
-    padding: 5px 10px;
+.sub-form form .inputs .input select {
+    background-color: #fff;
+    margin-left: 10px;
+    padding: 5px;
     font-size: 1.4rem;
     border: 1px solid rgba(255, 0, 0, 0.521);
     border-radius: 5px;
@@ -138,7 +139,7 @@
         text-align: end;
     }
     
-    .sub-form form .inputs .input input {
+    .sub-form form .inputs .input select {
         margin-left: 1rem;
         padding: 5px 10px;
         font-size: 0.8rem;
