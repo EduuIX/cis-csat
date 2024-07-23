@@ -7,10 +7,8 @@ import './cei01.css';
 import ToggleButton from '../../components/toggleButton/toggleButton';
 import { Tag } from '../../components/tag/tag';
 import { Formulario } from '../../components/form/form';
-import { BtnReverterVelidaco } from '../../components/btn/btnReverterValidacao/btnReverterVelidaco';
-import { BtnSubcontroleCompleto } from '../../components/btn/btnSubcontroleCompleto/btnSubcontroleCompleto';
-import { BtnDevolverValidar } from '../../components/btn/btnDevolverValidar/btnDevolverValidar';
 import { CardText } from '../../components/cards/cardText/cardText';
+
 
 const CEI01 = () => {
     const items = [
@@ -167,71 +165,56 @@ const CEI01 = () => {
                                                         {item.key === 'item1' && (
                                                             <>
                                                                 <Formulario 
-                                                                            ativo='Dispositivos' 
-                                                                            funcao='Detectar' 
-                                                                            assinado='Allan Costa'
-                                                                            completado='Allan Costa'
-                                                                            validado='Allan Costa'
-                                                                             />
-                                                                <div className="formulario">
-                                                                    <BtnReverterVelidaco />
-                                                                </div>
+                                                                    ativo='Dispositivos' 
+                                                                    funcao='Detectar' 
+                                                                    assinado='Allan Costa'
+                                                                    completado='Allan Costa'
+                                                                    validado='Allan Costa'
+                                                                />
                                                             </>
                                                         )}
                                                         {item.key === 'item2' && (
                                                             <>
                                                                 <Formulario 
-                                                                            ativo='Dispositivos' 
-                                                                            funcao='Reponder' 
-                                                                            assinado='Allan Costa'
-                                                                            completado='Allan Costa'
-                                                                            validado='-'
-                                                                             />
-                                                                <div className="formulario">
-                                                                    <BtnDevolverValidar />
-                                                                </div>
+                                                                    ativo='Dispositivos' 
+                                                                    funcao='Reponder' 
+                                                                    assinado='Allan Costa'
+                                                                    completado='Allan Costa'
+                                                                    validado='-'
+                                                                />
                                                             </>
                                                         )}
                                                         {item.key === 'item3' && (
                                                             <>
                                                                 <Formulario 
-                                                                            ativo='Dispositivos' 
-                                                                            funcao='Detectar' 
-                                                                            assinado='Allan Costa'
-                                                                            completado='Allan Costa'
-                                                                            validado='-'
-                                                                             />
-                                                                <div className="formulario">
-                                                                    <BtnDevolverValidar />
-                                                                </div>
+                                                                    ativo='Dispositivos' 
+                                                                    funcao='Detectar' 
+                                                                    assinado='Allan Costa'
+                                                                    completado='Allan Costa'
+                                                                    validado='-'
+                                                                />
                                                             </>
                                                         )}
                                                         {item.key === 'item4' && (
                                                             <>
                                                                 <Formulario 
-                                                                            ativo='Dispositivos' 
-                                                                            funcao='Identificar' 
-                                                                            assinado='Allan Costa'
-                                                                            completado='-'
-                                                                            validado='-'
-                                                                             />
-                                                                <div className="formulario">
-                                                                    <BtnSubcontroleCompleto />
-                                                                </div>
+                                                                    ativo='Dispositivos' 
+                                                                    funcao='Identificar' 
+                                                                    assinado='Allan Costa'
+                                                                    completado='-'
+                                                                    validado='-'
+                                                                />
                                                             </>
                                                         )}
                                                         {item.key === 'item5' && (
                                                             <>
                                                                 <Formulario 
-                                                                            ativo='Dispositivos' 
-                                                                            funcao='Detectar' 
-                                                                            assinado='Allan Costa'
-                                                                            completado='-'
-                                                                            validado='-'
-                                                                             />
-                                                            <div className="formulario">
-                                                                <BtnSubcontroleCompleto />
-                                                            </div>
+                                                                    ativo='Dispositivos' 
+                                                                    funcao='Detectar' 
+                                                                    assinado='Allan Costa'
+                                                                    completado='-'
+                                                                    validado='-'
+                                                                />
                                                             </>
                                                         )}
                                                     </div>

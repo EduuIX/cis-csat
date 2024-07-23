@@ -1,4 +1,6 @@
-.btnDevolverValidar {
+
+
+.btnValidar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,19 +8,7 @@
     cursor: pointer;
 }
 
-.btnDevolverValidar .devolver {
-    background-color: red;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    margin-right: 20px;
-}
-
-.btnDevolverValidar .devolver:hover {
-    background-color: rgb(151, 4, 4);
-}
-
-.btnDevolverValidar .validar {
+.btnValidar .validar {
     background-color: green;
     color: #fff;
     padding: 10px 15px;
@@ -26,14 +16,14 @@
     margin-right: 20px;
 }
 
-.btnDevolverValidar .validar:hover {
+.btnValidar .validar:hover {
     background-color: rgb(2, 85, 2);
 }
 
 
 @media(max-width: 900px) {
     
-    .btnDevolverValidar {
+    .btnValidar {
         font-size: 1rem;
         margin-top: 1rem;
     }
