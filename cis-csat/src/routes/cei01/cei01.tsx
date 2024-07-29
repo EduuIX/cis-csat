@@ -165,6 +165,7 @@ const CEI01 = () => {
                                                         {item.key === 'item1' && (
                                                             <>
                                                                 <Formulario 
+                                                                    formId={`cei01/${item.key}`}
                                                                     ativo='Dispositivos' 
                                                                     funcao='Detectar' 
                                                                     assinado='Allan Costa'
@@ -175,7 +176,8 @@ const CEI01 = () => {
                                                         )}
                                                         {item.key === 'item2' && (
                                                             <>
-                                                                <Formulario 
+                                                                <Formulario
+                                                                    formId={`cei01/${item.key}`} 
                                                                     ativo='Dispositivos' 
                                                                     funcao='Reponder' 
                                                                     assinado='Allan Costa'
@@ -186,7 +188,8 @@ const CEI01 = () => {
                                                         )}
                                                         {item.key === 'item3' && (
                                                             <>
-                                                                <Formulario 
+                                                                <Formulario
+                                                                    formId={`cei01/${item.key}`} 
                                                                     ativo='Dispositivos' 
                                                                     funcao='Detectar' 
                                                                     assinado='Allan Costa'
@@ -197,7 +200,8 @@ const CEI01 = () => {
                                                         )}
                                                         {item.key === 'item4' && (
                                                             <>
-                                                                <Formulario 
+                                                                <Formulario
+                                                                    formId={`cei01/${item.key}`} 
                                                                     ativo='Dispositivos' 
                                                                     funcao='Identificar' 
                                                                     assinado='Allan Costa'
@@ -208,7 +212,8 @@ const CEI01 = () => {
                                                         )}
                                                         {item.key === 'item5' && (
                                                             <>
-                                                                <Formulario 
+                                                                <Formulario
+                                                                    formId={`cei01/${item.key}`} 
                                                                     ativo='Dispositivos' 
                                                                     funcao='Detectar' 
                                                                     assinado='Allan Costa'

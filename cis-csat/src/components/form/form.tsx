@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { BtnValidar } from '../btn/btnValidar/btnValidar';
-import './form.css';
 import { BtnDevolver } from '../btn/btnDevolver/btnDevolver';
+import './form.css';
 
 type FormularioProps = {
+    formId: string;
     ativo: string;
     funcao: string;
     assinado: string;
@@ -12,11 +13,16 @@ type FormularioProps = {
     validado: string;
 };
 
-const Formulario: React.FC<FormularioProps> = ({ ativo, funcao, assinado, completado, validado }) => {
+const Formulario: React.FC<FormularioProps> = ({ formId, ativo, funcao, assinado, completado, validado }) => {
     const [politicaDefinida, setPoliticaDefinida] = useState('nenhuma-politica');
-    const [controleImplementado, setControleImplementado] = useState('nao-implementado');
-    const [controleAutomatizado, setControleAutomatizado] = useState('nao-automatizado');
-    const [controleRelatado, setControleRelatado] = useState('nao-reportado');
+    const [controleImplementado, setControleImplementado] = useState('nenhum-controle');
+    const [controleAutomatizado, setControleAutomatizado] = useState('nenhuma-automacao');
+    const [controleRelatado, setControleRelatado] = useState('nenhum-relato');
+
+    useEffect(() => {
+    }, [politicaDefinida, controleImplementado, controleAutomatizado, controleRelatado]);
+
+
 
     const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const { id, value } = e.target;
@@ -39,22 +45,20 @@ const Formulario: React.FC<FormularioProps> = ({ ativo, funcao, assinado, comple
     };
 
     const handleValidation = async () => {
+
+        await new Promise((resolve) => setTimeout(resolve, 0));
+
         const formData = {
+            formId,
             politicaDefinida,
             controleImplementado,
             controleAutomatizado,
             controleRelatado,
-            ativo,
-            funcao,
-            assinado,
-            completado,
-            validado
         };
 
         try {
-            const response = await axios.post('http://localhost:4000/save', formData);
+            const response = await axios.post('http://localhost:4000/form/save', formData);
             console.log(response.data);
-            // Adicione aqui qualquer lógica adicional que você precise após a resposta do servidor
         } catch (error) {
             console.error('Erro ao enviar os dados:', error);
         }
@@ -63,7 +67,7 @@ const Formulario: React.FC<FormularioProps> = ({ ativo, funcao, assinado, comple
     return (
         <main className="formulario">
             <section className="sub-form">
-                <form action="">
+                <form onSubmit={(e) => e.preventDefault()}>
                     <div className="inputs">
                         <div className="input">
                             <label htmlFor="politica-definida">Política definida</label>
@@ -79,33 +83,33 @@ const Formulario: React.FC<FormularioProps> = ({ ativo, funcao, assinado, comple
                         <div className="input">
                             <label htmlFor="controle-implementado">Controle Implementado</label>
                             <select id="controle-implementado" value={controleImplementado} onChange={handleSelectChange}>
-                                <option value="nao-implementado">Não Implementado</option>
-                                <option value="partes-implementado">Partes da política implementada</option>
-                                <option value="implementado-alguns">Implementado em alguns sistemas</option>
-                                <option value="implementado-maioria">Implementado na maioria dos sistemas</option>
-                                <option value="implementado-todos">Implementado em todos os sistemas</option>
+                                <option value="nenhum-controle">Não Implementado</option>
+                                <option value="controle-informal">Partes da política implementada</option>
+                                <option value="controle-parcialmente-implementado">Implementado em alguns sistemas</option>
+                                <option value="controle-implementado">Implementado na maioria dos sistemas</option>
+                                <option value="controle-implementado-aprovado">Implementado em todos os sistemas</option>
                                 <option value="nao-aplicavel">Não aplicável</option>
                             </select>
                         </div>
                         <div className="input">
                             <label htmlFor="controle-automatizado">Controle Automatizado</label>
                             <select id="controle-automatizado" value={controleAutomatizado} onChange={handleSelectChange}>
-                                <option value="nao-automatizado">Não automatizado</option>
-                                <option value="partes-automatizadas">Partes da política automatizadas</option>
-                                <option value="automatizado-alguns">Automatizado em alguns sistemas</option>
-                                <option value="automatizado-maioria">Automatizado na maioria dos sistemas</option>
-                                <option value="automatizado-todos">Automatizado em todos os sistemas</option>
+                                <option value="nenhuma-automacao">Não automatizado</option>
+                                <option value="automacao-informal">Partes da política automatizadas</option>
+                                <option value="automacao-parcial">Automatizado em alguns sistemas</option>
+                                <option value="automacao-total">Automatizado na maioria dos sistemas</option>
+                                <option value="automacao-total-aprovada">Automatizado em todos os sistemas</option>
                                 <option value="nao-aplicavel">Não aplicável</option>
                             </select>
                         </div>
                         <div className="input">
                             <label htmlFor="controle-relatado">Controle Relatado</label>
                             <select id="controle-relatado" value={controleRelatado} onChange={handleSelectChange}>
-                                <option value="nao-reportado">Não reportado</option>
-                                <option value="partes-relatadas">Partes da política relatadas</option>
-                                <option value="relatado-alguns">Relatado em alguns sistemas</option>
-                                <option value="relatado-maioria">Relatado na maioria dos sistemas</option>
-                                <option value="relatado-todos">Relatado em todos os sistemas</option>
+                                <option value="nenhum-relato">Não reportado</option>
+                                <option value="relato-informal">Partes da política relatadas</option>
+                                <option value="relato-parcial">Relatado em alguns sistemas</option>
+                                <option value="relato-completo">Relatado na maioria dos sistemas</option>
+                                <option value="relato-completo-aprovado">Relatado em todos os sistemas</option>
                                 <option value="nao-aplicavel">Não aplicável</option>
                             </select>
                         </div>
@@ -134,8 +138,10 @@ const Formulario: React.FC<FormularioProps> = ({ ativo, funcao, assinado, comple
                     </div>
                 </form>
             </section>
-            <BtnDevolver onClick={handleValidation} />
-            <BtnValidar onClick={handleValidation} />
+            <div className="btns">
+                <BtnDevolver onClick={handleValidation} />
+                <BtnValidar onClick={handleValidation} />
+            </div>
             <div className="atribuicao">
                 <h3>Atribuído a</h3>
                 <div className="resp">
@@ -150,5 +156,6 @@ const Formulario: React.FC<FormularioProps> = ({ ativo, funcao, assinado, comple
         </main>
     );
 };
+
 
 export { Formulario };
