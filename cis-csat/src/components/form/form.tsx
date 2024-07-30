@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { setOverallAverage } from '../../store/averageSlice';
+import './form.css';
 import { BtnValidar } from '../btn/btnValidar/btnValidar';
 import { BtnDevolver } from '../btn/btnDevolver/btnDevolver';
-import './form.css';
 
 type FormularioProps = {
     formId: string;
@@ -14,15 +16,12 @@ type FormularioProps = {
 };
 
 const Formulario: React.FC<FormularioProps> = ({ formId, ativo, funcao, assinado, completado, validado }) => {
+    const dispatch = useDispatch();
+
     const [politicaDefinida, setPoliticaDefinida] = useState('nenhuma-politica');
     const [controleImplementado, setControleImplementado] = useState('nenhum-controle');
     const [controleAutomatizado, setControleAutomatizado] = useState('nenhuma-automacao');
     const [controleRelatado, setControleRelatado] = useState('nenhum-relato');
-
-    useEffect(() => {
-    }, [politicaDefinida, controleImplementado, controleAutomatizado, controleRelatado]);
-
-
 
     const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const { id, value } = e.target;
@@ -45,9 +44,6 @@ const Formulario: React.FC<FormularioProps> = ({ formId, ativo, funcao, assinado
     };
 
     const handleValidation = async () => {
-
-        await new Promise((resolve) => setTimeout(resolve, 0));
-
         const formData = {
             formId,
             politicaDefinida,
@@ -59,6 +55,10 @@ const Formulario: React.FC<FormularioProps> = ({ formId, ativo, funcao, assinado
         try {
             const response = await axios.post('http://localhost:4000/form/save', formData);
             console.log(response.data);
+
+            const overallResponse = await axios.get('http://localhost:4000/form/overall-average');
+            const overallAverage = overallResponse.data.overallAverage;
+            dispatch(setOverallAverage(overallAverage));
         } catch (error) {
             console.error('Erro ao enviar os dados:', error);
         }
@@ -140,7 +140,7 @@ const Formulario: React.FC<FormularioProps> = ({ formId, ativo, funcao, assinado
             </section>
             <div className="btns">
                 <BtnDevolver onClick={handleValidation} />
-                <BtnValidar onClick={handleValidation} />
+                <BtnValidar onClick={handleValidation}/>
             </div>
             <div className="atribuicao">
                 <h3>Atribuído a</h3>
@@ -156,6 +156,5 @@ const Formulario: React.FC<FormularioProps> = ({ formId, ativo, funcao, assinado
         </main>
     );
 };
-
 
 export { Formulario };

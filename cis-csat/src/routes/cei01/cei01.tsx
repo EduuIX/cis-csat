@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Card } from '../../components/cards/card/card';
 import { Footer } from '../../components/footer/footer';
 import { Menu } from '../../components/menu/menu';
@@ -8,6 +8,7 @@ import ToggleButton from '../../components/toggleButton/toggleButton';
 import { Tag } from '../../components/tag/tag';
 import { Formulario } from '../../components/form/form';
 import { CardText } from '../../components/cards/cardText/cardText';
+import axios from 'axios';
 
 
 const CEI01 = () => {
@@ -26,6 +27,25 @@ const CEI01 = () => {
         item4: false,
         item5: false
     });
+
+    const [overallAverage, setOverallAverage] = useState<number | null>(null);
+    useEffect(() => {
+        const fetchOverallAverage = async () => {
+            try {
+                const response = await axios.get('http://localhost:4000/form/overall-average');
+                if (typeof response.data.data.overallAverage === 'number') {
+                    setOverallAverage(response.data.data.overallAverage);
+                } else {
+                    console.error('Valor inválido recebido para overallAverage');
+                }
+            } catch (error) {
+                console.error('Erro ao buscar a média geral:', error);
+            }
+        };
+    
+        fetchOverallAverage();
+    }, []);
+    
 
     const toggleSubmenu = (key: string) => {
         setSubmenu(prev => ({
@@ -60,7 +80,7 @@ const CEI01 = () => {
                         <div className="cardsArea">
                             <Card 
                                 textoCima='Pontuação média de controle'
-                                textoCentro='29'
+                                textoCentro={overallAverage !== null ? overallAverage.toString() : 'Carregando...'}
                                 nivel1='a'
                                 nivel2='a'
                                 nivel3='b'
