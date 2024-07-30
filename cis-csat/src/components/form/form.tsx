@@ -53,10 +53,10 @@ const Formulario: React.FC<FormularioProps> = ({ formId, ativo, funcao, assinado
         };
 
         try {
-            const response = await axios.post('http://localhost:4000/form/save', formData);
+            const response = await axios.post('https://cis-csat-backend.onrender.com/form/save', formData);
             console.log(response.data);
 
-            const overallResponse = await axios.get('http://localhost:4000/form/overall-average');
+            const overallResponse = await axios.get('https://cis-csat-backend.onrender.com/form/overall-average');
             const overallAverage = overallResponse.data.overallAverage;
             dispatch(setOverallAverage(overallAverage));
         } catch (error) {

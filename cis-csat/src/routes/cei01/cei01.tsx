@@ -32,7 +32,7 @@ const CEI01 = () => {
     useEffect(() => {
         const fetchOverallAverage = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/form/overall-average');
+                const response = await axios.get('https://cis-csat-backend.onrender.com/form/overall-average');
                 if (typeof response.data.data.overallAverage === 'number') {
                     setOverallAverage(response.data.data.overallAverage);
                 } else {
